@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Names</string>
+    <string name="action_add_name">ADD NAME</string>
+</resources>
