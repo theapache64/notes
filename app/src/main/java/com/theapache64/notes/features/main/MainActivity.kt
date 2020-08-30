@@ -1,13 +1,15 @@
-package com.theapache64.places.features.main
+package com.theapache64.notes.features.main
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import com.theapache64.places.R
-import com.theapache64.places.databinding.ActivityMainBinding
-import com.theapache64.places.utils.calladapter.flow.Resource
+import com.theapache64.notes.R
+import com.theapache64.notes.databinding.ActivityMainBinding
+import com.theapache64.notes.utils.calladapter.flow.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,19 +27,25 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-        viewModel.names.observe(this, Observer {
+        viewModel.notes.observe(this, Observer {
             when (it) {
 
                 is Resource.Loading -> {
-
+                    Toast.makeText(this, "Loading...", Toast.LENGTH_SHORT).show();
+                    binding.rvNames.visibility = View.INVISIBLE
                 }
 
                 is Resource.Success -> {
+                    val adapter = NotesAdapter(this, it.data) { position ->
+                        Toast.makeText(this, "Clicked on '$position'", Toast.LENGTH_SHORT).show();
+                    }
 
+                    binding.rvNames.adapter = adapter
+                    binding.rvNames.visibility = View.VISIBLE
                 }
 
                 is Resource.Error -> {
-
+                    Toast.makeText(this, it.errorData, Toast.LENGTH_SHORT).show();
                 }
             }
         })

@@ -1,6 +1,6 @@
-package com.theapache64.places.data.remote
+package com.theapache64.notes.data.remote
 
-import com.theapache64.places.utils.calladapter.flow.Resource
+import com.theapache64.notes.utils.calladapter.flow.Resource
 import com.theapache64.retrosheet.core.Read
 import kotlinx.coroutines.flow.Flow
 import retrofit2.http.GET
@@ -12,6 +12,6 @@ interface ApiInterface {
 
     @Read("SELECT *")
     @GET("names")
-    fun getNames(): Flow<Resource<List<Place>>>
+    fun getNames(): Flow<Resource<List<Note>>>
 
 }

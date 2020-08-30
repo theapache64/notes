@@ -1,4 +1,4 @@
-package com.theapache64.places
+package com.theapache64.notes
 
 import org.junit.Test
 

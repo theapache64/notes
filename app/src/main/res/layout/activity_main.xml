@@ -6,13 +6,12 @@
     <data>
         <variable
             name="viewModel"
-            type="com.theapache64.places.features.main.MainViewModel" />
+            type="com.theapache64.notes.features.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
         tools:context=".features.main.MainActivity">
 
         <!--Names-->
@@ -20,6 +19,8 @@
             android:id="@+id/rv_names"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@id/b_add_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,18 +31,26 @@
             android:id="@+id/b_add_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/action_add_name"
+            android:layout_margin="8dp"
+            android:text="@string/action_add_note"
             android:onClick="@{()->viewModel.onAddNameClicked()}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/b_refresh"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rv_names" />
 
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/g_content"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/b_refresh"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="rv_names,rv_names" />
+            android:layout_margin="8dp"
+            android:onClick="@{()->viewModel.onRefreshClicked()}"
+            android:text="@string/action_refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/b_add_name"
+            app:layout_constraintTop_toBottomOf="@id/rv_names" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

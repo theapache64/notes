@@ -1,4 +1,4 @@
-package com.theapache64.places
+package com.theapache64.notes
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

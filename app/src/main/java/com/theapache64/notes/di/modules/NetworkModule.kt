@@ -1,7 +1,7 @@
-package com.theapache64.places.di.modules
+package com.theapache64.notes.di.modules
 
-import com.theapache64.places.data.remote.ApiInterface
-import com.theapache64.places.utils.calladapter.flow.FlowResourceCallAdapterFactory
+import com.theapache64.notes.data.remote.ApiInterface
+import com.theapache64.notes.utils.calladapter.flow.FlowResourceCallAdapterFactory
 import com.theapache64.retrosheet.RetrosheetInterceptor
 import dagger.Module
 import dagger.Provides
@@ -37,7 +37,7 @@ class NetworkModule {
         okHttpClient: OkHttpClient
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://docs.google.com/spreadsheets/d/1P5SQzhO5GKrz60QkNInfFK3V-xr18m92LHD5oeqihPM/")
+            .baseUrl("https://docs.google.com/spreadsheets/d/1YTWKe7_mzuwl7AO1Es1aCtj5S9buh3vKauKCMjx1j_M/")
             .client(okHttpClient)
             .addCallAdapterFactory(FlowResourceCallAdapterFactory())
             .addConverterFactory(MoshiConverterFactory.create())

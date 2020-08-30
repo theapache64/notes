@@ -1,6 +1,6 @@
-package com.theapache64.places.data
+package com.theapache64.notes.data
 
-import com.theapache64.places.data.remote.ApiInterface
+import com.theapache64.notes.data.remote.ApiInterface
 import javax.inject.Inject
 
 /**

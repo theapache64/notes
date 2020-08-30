@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Names</string>
-    <string name="action_add_name">ADD NAME</string>
+    <string name="app_name">Notes</string>
+    <string name="action_add_note">ADD NOTE</string>
+    <string name="action_refresh">REFRESH</string>
 </resources>
