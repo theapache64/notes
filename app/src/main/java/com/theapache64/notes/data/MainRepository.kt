@@ -9,5 +9,5 @@ import javax.inject.Inject
 class MainRepository @Inject constructor(
     private val apiInterface: ApiInterface
 ) {
-    fun getNames() = apiInterface.getNames()
+    fun getNames() = apiInterface.getNotes()
 }

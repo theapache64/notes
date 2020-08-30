@@ -21,7 +21,7 @@ class NetworkModule {
     @Provides
     fun provideRetrosheetInterceptor(): RetrosheetInterceptor {
         return RetrosheetInterceptor.Builder()
-            .addSheet("names", "name")
+            .addSheet("notes", "created_at", "title", "description")
             .build()
     }
 

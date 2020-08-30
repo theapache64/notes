@@ -5,14 +5,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.theapache64.notes.NotesApp"
+        android:name=".NotesApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Names">
-        <activity android:name="com.theapache64.notes.features.main.MainActivity">
+        <activity android:name=".features.addnote.AddNoteActivity"></activity>
+        <activity android:name=".features.notes.NotesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

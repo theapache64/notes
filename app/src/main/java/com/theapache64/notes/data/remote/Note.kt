@@ -8,6 +8,8 @@ import com.squareup.moshi.JsonClass
  */
 @JsonClass(generateAdapter = true)
 class Note(
+    @Json(name = "created_at")
+    val timestamp: String,
     @Json(name = "title")
     val title: String,
     @Json(name = "description")

@@ -1,4 +1,4 @@
-package com.theapache64.notes.features.main
+package com.theapache64.notes.features.notes
 
 
 import android.content.Context

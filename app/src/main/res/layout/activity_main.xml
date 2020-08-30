@@ -6,13 +6,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.theapache64.notes.features.main.MainViewModel" />
+            type="com.theapache64.notes.features.notes.NotesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".features.main.MainActivity">
+        tools:context=".features.notes.NotesActivity">
 
         <!--Names-->
         <androidx.recyclerview.widget.RecyclerView

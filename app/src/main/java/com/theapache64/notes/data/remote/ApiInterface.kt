@@ -11,7 +11,7 @@ import retrofit2.http.GET
 interface ApiInterface {
 
     @Read("SELECT *")
-    @GET("names")
-    fun getNames(): Flow<Resource<List<Note>>>
+    @GET("notes")
+    fun getNotes(): Flow<Resource<List<Note>>>
 
 }

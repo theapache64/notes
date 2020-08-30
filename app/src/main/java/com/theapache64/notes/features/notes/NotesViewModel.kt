@@ -1,4 +1,4 @@
-package com.theapache64.notes.features.main
+package com.theapache64.notes.features.notes
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
@@ -10,7 +10,7 @@ import timber.log.Timber
 /**
  * Created by theapache64 : Aug 29 Sat,2020 @ 09:59
  */
-class MainViewModel @ViewModelInject constructor(
+class NotesViewModel @ViewModelInject constructor(
     private val mainRepository: MainRepository
 ) : ViewModel() {
 
@@ -19,12 +19,16 @@ class MainViewModel @ViewModelInject constructor(
         mainRepository.getNames().asLiveData()
     }
 
+    private val _shouldLaunchAddNote = MutableLiveData<Boolean>()
+    val shouldLaunchAddNote: LiveData<Boolean> = _shouldLaunchAddNote
+
     init {
         _shouldLoadNotes.value = true
     }
 
     fun onAddNameClicked() {
         Timber.d("onAddNameClicked: Add name clicked ")
+        _shouldLaunchAddNote.value = true
     }
 
     fun onRefreshClicked() {

@@ -1,4 +1,4 @@
-package com.theapache64.notes.features.main
+package com.theapache64.notes.features.notes
 
 import android.os.Bundle
 import android.view.View
@@ -9,13 +9,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.theapache64.notes.R
 import com.theapache64.notes.databinding.ActivityMainBinding
+import com.theapache64.notes.features.addnote.AddNoteActivity
 import com.theapache64.notes.utils.calladapter.flow.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class NotesActivity : AppCompatActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: NotesViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +48,15 @@ class MainActivity : AppCompatActivity() {
                 is Resource.Error -> {
                     Toast.makeText(this, it.errorData, Toast.LENGTH_SHORT).show();
                 }
+            }
+        })
+
+        viewModel.shouldLaunchAddNote.observe(this, Observer {
+            if (it) {
+                startActivityForResult(
+                    AddNoteActivity.getStartIntent(this),
+                    AddNoteActivity.RQ_CODE
+                )
             }
         })
     }
