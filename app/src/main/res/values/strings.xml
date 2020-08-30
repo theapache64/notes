@@ -2,4 +2,7 @@
     <string name="app_name">Notes</string>
     <string name="action_add_note">ADD NOTE</string>
     <string name="action_refresh">REFRESH</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_description">Description</string>
+    <string name="title_add_note">Add Note</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.theapache64.notes.di.modules
 
 import com.theapache64.notes.data.remote.ApiInterface
+import com.theapache64.notes.utils.Const
 import com.theapache64.notes.utils.calladapter.flow.FlowResourceCallAdapterFactory
 import com.theapache64.retrosheet.RetrosheetInterceptor
 import dagger.Module
@@ -22,6 +23,10 @@ class NetworkModule {
     fun provideRetrosheetInterceptor(): RetrosheetInterceptor {
         return RetrosheetInterceptor.Builder()
             .addSheet("notes", "created_at", "title", "description")
+            .addForm(
+                Const.ADD_NOTE_ENDPOINT,
+                "https://docs.google.com/forms/d/e/1FAIpQLSdmavg6P4eZTmIu-0M7xF_z-qDCHdpGebX8MGL43HSGAXcd3w/viewform?usp=sf_link"
+            )
             .build()
     }
 

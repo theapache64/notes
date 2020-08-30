@@ -5,7 +5,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.theapache64.notes.data.remote.Note
+import com.theapache64.notes.data.remote.getnotes.Note
 import com.theapache64.notes.databinding.ItemNoteBinding
 
 /**

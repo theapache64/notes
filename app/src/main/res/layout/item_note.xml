@@ -7,7 +7,7 @@
 
         <variable
             name="note"
-            type="com.theapache64.notes.data.remote.Note" />
+            type="com.theapache64.notes.data.remote.getnotes.Note" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:text="@{note.timestamp}"
+                android:text="@{note.createdAt}"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="13sp"
                 android:textStyle="italic" />

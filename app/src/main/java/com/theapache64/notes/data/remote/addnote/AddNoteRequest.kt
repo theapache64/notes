@@ -1,4 +1,4 @@
-package com.theapache64.notes.data.remote
+package com.theapache64.notes.data.remote.addnote
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -7,11 +7,9 @@ import com.squareup.moshi.JsonClass
  * Created by theapache64 : Aug 29 Sat,2020 @ 10:13
  */
 @JsonClass(generateAdapter = true)
-class Note(
-    @Json(name = "created_at")
-    val timestamp: String,
-    @Json(name = "title")
+data class AddNoteRequest(
+    @Json(name = "Title")
     val title: String,
-    @Json(name = "description")
+    @Json(name = "Description")
     val description: String
 )

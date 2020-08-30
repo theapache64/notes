@@ -1,5 +1,7 @@
 package com.theapache64.notes.features.notes
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -59,5 +61,14 @@ class NotesActivity : AppCompatActivity() {
                 )
             }
         })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == AddNoteActivity.RQ_CODE && resultCode == Activity.RESULT_OK) {
+            // new note added so refresh
+            viewModel.onNewNoteAdded()
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
     }
 }
