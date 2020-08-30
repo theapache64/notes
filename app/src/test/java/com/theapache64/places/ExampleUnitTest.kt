@@ -1,4 +1,4 @@
-package com.theapache64.names
+package com.theapache64.places
 
 import org.junit.Test
 

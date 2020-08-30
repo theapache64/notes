@@ -1,11 +1,13 @@
-package com.theapache64.names.features.main
+package com.theapache64.places.features.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.theapache64.names.R
-import com.theapache64.names.databinding.ActivityMainBinding
+import androidx.lifecycle.Observer
+import com.theapache64.places.R
+import com.theapache64.places.databinding.ActivityMainBinding
+import com.theapache64.places.utils.calladapter.flow.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -22,5 +24,22 @@ class MainActivity : AppCompatActivity() {
             )
 
         binding.viewModel = viewModel
+
+        viewModel.names.observe(this, Observer {
+            when (it) {
+
+                is Resource.Loading -> {
+
+                }
+
+                is Resource.Success -> {
+
+                }
+
+                is Resource.Error -> {
+
+                }
+            }
+        })
     }
 }

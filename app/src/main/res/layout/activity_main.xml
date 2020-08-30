@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.theapache64.names.features.main.MainViewModel" />
+            type="com.theapache64.places.features.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,6 +37,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rv_names" />
 
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/g_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="rv_names,rv_names" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
