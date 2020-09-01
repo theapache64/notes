@@ -22,7 +22,9 @@ class NetworkModule {
     @Provides
     fun provideRetrosheetInterceptor(): RetrosheetInterceptor {
         return RetrosheetInterceptor.Builder()
+            // To Read
             .addSheet("notes", "created_at", "title", "description")
+            // To Write
             .addForm(
                 Const.ADD_NOTE_ENDPOINT,
                 "https://docs.google.com/forms/d/e/1FAIpQLSdmavg6P4eZTmIu-0M7xF_z-qDCHdpGebX8MGL43HSGAXcd3w/viewform?usp=sf_link"
