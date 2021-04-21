@@ -1,6 +1,8 @@
 # notes 🗒️
 
-A sample note taking app, to demonstrate the [Retrosheet](https://github.com/theapache64/retrosheet) library.
+![](demo.png)
+
+> A sample note taking app, to demonstrate the [Retrosheet](https://github.com/theapache64/retrosheet) library.
 
 ## Run 💻
 

@@ -18,9 +18,9 @@ interface ApiInterface {
 
     @Read("SELECT * ORDER BY created_at DESC")
     @GET("notes")
-    fun getNotes(): Flow<Resource<List<Note>>>
+    fun getNotes(): Flow<Resource<List<Note>>> // you can also use suspend and return List<Note>
 
     @Write
     @POST(Const.ADD_NOTE_ENDPOINT)
-    fun addNote(@Body note: AddNoteRequest): Flow<Resource<AddNoteRequest>>
+    fun addNote(@Body note: AddNoteRequest): Flow<Resource<AddNoteRequest>> // you can also use suspend and return AddNoteRequest
 }
