@@ -71,7 +71,7 @@ dependencies {
 	implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
     // Retrosheet
-    implementation 'com.theapache64:retrosheet:1.2.0'
+    implementation 'com.github.theapache64:retrosheet:2.0.0-alpha05'
 
 	// Kotlinx Coroutines Core : Coroutines support libraries for Kotlin
 	implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'

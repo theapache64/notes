@@ -1,9 +1,9 @@
 package com.theapache64.notes.di.modules
 
+import com.github.theapache64.retrosheet.RetrosheetInterceptor
 import com.theapache64.notes.data.remote.ApiInterface
 import com.theapache64.notes.utils.Const
 import com.theapache64.notes.utils.calladapter.flow.FlowResourceCallAdapterFactory
-import com.theapache64.retrosheet.RetrosheetInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

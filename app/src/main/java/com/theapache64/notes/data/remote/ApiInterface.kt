@@ -1,11 +1,11 @@
 package com.theapache64.notes.data.remote
 
+import com.github.theapache64.retrosheet.core.Read
+import com.github.theapache64.retrosheet.core.Write
 import com.theapache64.notes.data.remote.addnote.AddNoteRequest
 import com.theapache64.notes.data.remote.getnotes.Note
 import com.theapache64.notes.utils.Const
 import com.theapache64.notes.utils.calladapter.flow.Resource
-import com.theapache64.retrosheet.core.Read
-import com.theapache64.retrosheet.core.Write
 import kotlinx.coroutines.flow.Flow
 import retrofit2.http.Body
 import retrofit2.http.GET
