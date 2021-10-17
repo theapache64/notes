@@ -14,12 +14,14 @@
         android:theme="@style/Theme.Names">
         <activity
             android:name=".features.addnote.AddNoteActivity"
+            android:exported="false"
             android:label="@string/title_add_note" />
 
-        <activity android:name=".features.notes.NotesActivity">
+        <activity
+            android:name=".features.notes.NotesActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -6,12 +6,15 @@ import com.theapache64.notes.data.NotesRepo
 import com.theapache64.notes.data.remote.getnotes.Note
 import com.theapache64.notes.utils.calladapter.flow.Resource
 import com.theapache64.notes.utils.livedata.SingleLiveEvent
+import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
+import javax.inject.Inject
 
 /**
  * Created by theapache64 : Aug 29 Sat,2020 @ 09:59
  */
-class NotesViewModel @ViewModelInject constructor(
+@HiltViewModel
+class NotesViewModel @Inject constructor(
     private val notesRepo: NotesRepo
 ) : ViewModel() {
 

@@ -7,7 +7,7 @@ import com.theapache64.notes.utils.calladapter.flow.FlowResourceCallAdapterFacto
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -16,7 +16,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
  * Created by theapache64 : Aug 29 Sat,2020 @ 10:14
  */
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 class NetworkModule {
 
     @Provides
