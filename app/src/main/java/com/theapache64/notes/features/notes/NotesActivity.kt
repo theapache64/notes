@@ -30,7 +30,7 @@ class NotesActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-        viewModel.notes.observe(this, Observer {
+        viewModel.notes.observe(this, {
             when (it) {
 
                 is Resource.Loading -> {
@@ -53,8 +53,9 @@ class NotesActivity : AppCompatActivity() {
             }
         })
 
-        viewModel.shouldLaunchAddNote.observe(this, Observer {
+        viewModel.shouldLaunchAddNote.observe(this, {
             if (it) {
+                // TODO:
                 startActivityForResult(
                     AddNoteActivity.getStartIntent(this),
                     AddNoteActivity.RQ_CODE

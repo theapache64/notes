@@ -1,7 +1,7 @@
 package com.theapache64.notes.data.remote
 
-import com.github.theapache64.retrosheet.core.Read
-import com.github.theapache64.retrosheet.core.Write
+import com.github.theapache64.retrosheet.annotations.Read
+import com.github.theapache64.retrosheet.annotations.Write
 import com.theapache64.notes.data.remote.addnote.AddNoteRequest
 import com.theapache64.notes.data.remote.getnotes.Note
 import com.theapache64.notes.utils.Const
@@ -15,6 +15,7 @@ import retrofit2.http.POST
  * Created by theapache64 : Aug 29 Sat,2020 @ 10:14
  */
 interface ApiInterface {
+
 
     @Read("SELECT * ORDER BY created_at DESC")
     @GET("notes")
